@@ -1,13 +1,222 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body{
+  margin:0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+  height: 100%;
+}
+.grid-container{
+  display: grid;
+  grid-template-areas: 'header' 'main' 'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+header{
+  grid-area: header;
+  background-color: black;
+}
+main{
+  grid-area: main;
+  padding: 1rem;
+}
+footer{
+  grid-area: footer;
+  background-color: rgb(29, 29, 31);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: rgb(255, 174, 0);
+}
+header a{
+  color: white;
+  padding: 1rem;
+}
+
+.paginador{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.paginate{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 10%;
+  position: fixed;
+  right: 2%;
+  top: 25%;
+}
+
+.paginate button{
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  border: 2px solid;
+  line-height: 3rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.prev_rot{
+  transform: rotate(180deg);
+}
+
+.miga_pan{
+  font-size: 100%;
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 1rem;
+}
+.miga_pan a{
+  font-weight: bold;
+  font-size: 80%;
+  color: black;
+}
+
+.pdp{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.pdp a{
+  color: black;
+  margin-bottom: 1rem;
+}
+.pdp .col-1 h2{
+  margin-bottom: 0rem;
+  padding-bottom: 0rem;
+}
+.pdp .col-1{
+  width: 50%;
+}
+
+.pdp button{
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  border: 2px solid;
+  line-height: 3rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.pdp select{
+  margin-top: 1rem;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  border: 2px solid;
+  line-height: 3rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 120%;
+}
+.grilla{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+.filter{
+  width: 15%;
+  
+}
+.filter .row{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.gridhome{
+  width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1{
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2{
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+img{
+  border-radius: 0.5rem;
+}
+img.medium{
+  max-width: 29rem;
+  width: 100%;
+}
+
+.card{
+  border:0.1rem black solid;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  max-width: 250px;
+}
+.card-body{
+  padding: 1rem;
+}
+
+.card-body > *{
+  margin-bottom: 0.1rem;
+}
+.card-body h2{
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 100%;
+ text-align: left;
+ color: black;
+ margin: 0;
+ padding: 0;
+}
+
+
+.price{
+  font-size: 2rem;
+}
+
+.fa-start::before{
+  content: "\2605";
+  color: orange;
+  font-style: normal;
+  font-size: 120%;
 }
